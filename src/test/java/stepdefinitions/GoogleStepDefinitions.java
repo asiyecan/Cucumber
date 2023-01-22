@@ -13,6 +13,10 @@ public class GoogleStepDefinitions {
     public void user_is_on_the_google_home_page() {
 //        WRITE THE JAVA CODE
         Driver.getDriver().get(ConfigReader.getProperty("google_url"));
+        try{
+            googlePage.popUpAccept.click();//accept pop up if visible. Catch the error and continue if not visible
+        }catch (Exception e){
+        }
     }
     @When("user search for iPhone")
     public void user_search_for_i_phone() {
