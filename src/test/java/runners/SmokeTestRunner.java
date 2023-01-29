@@ -13,15 +13,9 @@ import org.junit.runner.RunWith;
         },
         monochrome=true,
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions", "hooks"},
+        glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@failed_tests"
+        tags = "@scenario_outline"
 )
-public class Runner {
+public class SmokeTestRunner {
 }
-/*
- features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
- glue = "stepdefinitions", //PATH OF STEP DEFINITIONS
- dryRun = false //IF dryRun = true. RUN DRY. JUST GIVE ME THE MISSING STEP DEFINITIONS. DON'T RUN THE TEST CASES.
- dryRun= false when we are doing test execution. dryRun=true when we are generation missing step definitions
-*/
