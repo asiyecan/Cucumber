@@ -1,0 +1,16 @@
+*****SELENIUM GRID NOTES*****
+LINK: https://www.selenium.dev/documentation/grid/getting_started/
+
+STEPS:
+1. Create a folder on the Desktop : SeleniumServer
+2. *Download Selenium Server: https://www.selenium.dev/downloads/
+   *Download Chrome Driver  : https://chromedriver.chromium.org/downloads
+   *Download Firefox Driver : https://github.com/mozilla/geckodriver/releases
+NOTE: Make sure the selenium server and drivers are UNZIPPED and in the SeleniumServer folder
+3. Open your Terminal or CMD and change the directory to SeleniumServer folder
+MAC: Terminal
+WINDOWS: CMD. Search>CMD>select Command Prompt
+To switch the directory use: cd /Users/techproed/Desktop/SeleniumServer
+4.Run the standalone server
+java -jar selenium-server-4.8.0.jar standalone
+5.Then you should see message: Started Selenium Standalone 4.8.0 (revision 267030adea): http://192.168.0.14:4444
