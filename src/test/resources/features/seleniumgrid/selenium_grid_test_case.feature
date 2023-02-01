@@ -1,0 +1,18 @@
+Feature: grid_feature
+  @grid_chrome
+  Scenario: TC01_running_tests_on_Chrome
+    Given user is on the application_url using chrome
+    Then verify the page title contains "Techpro Education"
+    Then close the remote driver
+
+  @grid_firefox
+  Scenario: TC02_running_tests_on_firefox
+    Given user is on the application_url using firefox
+    Then verify the page title contains "Techpro Education"
+    Then close the remote driver
+
+  @grid_edge
+  Scenario: TC03_running_tests_on_edge
+    Given user is on the application_url using edge
+    Then verify the page title contains "Techpro Education"
+    Then close the remote driver

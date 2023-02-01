@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="9.575" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="hooks_test" name="TC_01_" time="9.459">
-<failure type="java.lang.AssertionError">
-<![CDATA[java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.LoginStepDefinitions.verify_the_next_page_url_contains_login_keyword(LoginStepDefinitions.java:42)
-	at ✽.verify the next page url contains login keyword(file:///C:/Users/can07/IdeaProjects/my-cucumber-project/./src/test/resources/features/day26_failed_test_cases.feature:8)
-]]>
-</failure>
+<testsuite name="Cucumber" time="4.733" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="grid_feature" name="TC01_running_tests_on_Chrome" time="4.611">
 <system-out><![CDATA[
-Given user is on "https://www.bluerentalcars.com/login" page................passed
-And user enters customer_email and customer_password........................passed
-Then verify the next page url contains login keyword........................failed
+Given user is on the application_url using chrome...........................passed
+Then verify the page title contains "Techpro Education".....................passed
+Then close the remote driver................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
