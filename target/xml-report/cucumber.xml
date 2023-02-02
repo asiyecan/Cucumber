@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.733" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="grid_feature" name="TC01_running_tests_on_Chrome" time="4.611">
+<testsuite name="Cucumber" time="11.568" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="db_customer_testing" name="TC01_read_customer_ssn_info" time="3.458">
 <system-out><![CDATA[
-Given user is on the application_url using chrome...........................passed
-Then verify the page title contains "Techpro Education".....................passed
-Then close the remote driver................................................passed
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then user reads all the column "login" data.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC02_read_customer_firstname_info" time="7.916">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then user reads all the column "first_name" data............................passed
 ]]></system-out>
 </testcase>
 </testsuite>
