@@ -33,5 +33,4 @@ public class Hooks {
     public void tearDownSmokeScenarios(){
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
-
 }

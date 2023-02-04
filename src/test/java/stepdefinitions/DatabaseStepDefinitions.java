@@ -3,9 +3,11 @@ package stepdefinitions;
 import com.mongodb.DB;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import utilities.DBUtils;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class DatabaseStepDefinitions {
     @Given("user connects to the application database")
@@ -49,6 +51,19 @@ public class DatabaseStepDefinitions {
 
         System.out.println("Row Count : "+rowNum);
         System.out.println("Row Counr : "+DBUtils.getRowCount());
+
+    }
+
+    @Then("verify table {string} and column {string} contains data {string}")
+    public void verify_table_and_column_contains_data(String table, String column, String data) {
+//        getting to the table
+        String query ="SELECT * FROM "+table;
+
+//        getting all of the column data and storing in a list
+        List<Object> columnData = DBUtils.getColumnData(query,column);
+        System.out.println(columnData);
+
+        Assert.assertTrue(columnData.contains(data));
 
 
     }

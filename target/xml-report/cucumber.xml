@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="11.568" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="db_customer_testing" name="TC01_read_customer_ssn_info" time="3.458">
+<testsuite name="Cucumber" time="9.956" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC_01_" time="9.788">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.LoginStepDefinitions.verify_the_next_page_url_contains_login_keyword(LoginStepDefinitions.java:42)
+	at ✽.verify the next page url contains login keyword(file:///C:/Users/can07/IdeaProjects/my-cucumber-project/./src/test/resources/features/day26_failed_test_cases.feature:8)
+]]>
+</failure>
 <system-out><![CDATA[
-Given user connects to the application database.............................passed
-And user gets the column "*" from table "jhi_user"..........................passed
-Then user reads all the column "login" data.................................passed
-]]></system-out>
-</testcase>
-<testcase classname="db_customer_testing" name="TC02_read_customer_firstname_info" time="7.916">
-<system-out><![CDATA[
-Given user connects to the application database.............................passed
-And user gets the column "*" from table "jhi_user"..........................passed
-Then user reads all the column "first_name" data............................passed
+Given user is on "https://www.bluerentalcars.com/login" page................passed
+And user enters customer_email and customer_password........................passed
+Then verify the next page url contains login keyword........................failed
 ]]></system-out>
 </testcase>
 </testsuite>
