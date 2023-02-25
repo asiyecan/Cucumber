@@ -1,7 +1,9 @@
 package runners;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
@@ -12,13 +14,14 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        monochrome=true,
+        monochrome = true,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@failed_tests"
+        tags = "@TC03_Api"
 )
 public class Runner {
+
 }
 /*
  features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
