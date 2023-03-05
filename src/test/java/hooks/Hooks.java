@@ -6,6 +6,7 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
+
 import static base_urls.MedunnaBaseUrl.medunnaSetUp;
 
 public class Hooks {
@@ -42,7 +43,7 @@ public class Hooks {
     }
 
     @Before("@TC03_Api")
-    public void beforeApi() {
+    public void beforeApi() {//This method will run before TC03_Api
 
         medunnaSetUp();
 
